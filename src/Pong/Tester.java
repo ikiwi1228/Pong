@@ -3,29 +3,25 @@ package Pong;
 import javax.swing.JFrame;
 import java.awt.Component;
 
-public class Tester extends JFrame
-{
-	private static final int WIDTH = 800;
-	private static final int HEIGHT = 600;
+public class Tester extends JFrame {
 
-	public Tester()
-	{
-		super("PONG TESTER");
-		setSize(WIDTH,HEIGHT);
+    private static final int WIDTH = 800;
+    private static final int HEIGHT = 600;
 
-		//getContentPane().add(new BlockTestTwo());
+    public Tester() {
+        super("PONG TESTER");
+        setSize(WIDTH, HEIGHT);
 
-		//uncomment when you are ready to test the Ball
-		getContentPane().add(new BallTestTwo());
+        //getContentPane().add(new BlockTestTwo());
+        //uncomment when you are ready to test the Ball
+        //getContentPane().add(new BallTestTwo());
 
-		//PaddleTestTwo padTest = new PaddleTestTwo();
-		//((Component)padTest).setFocusable(true);
-		//getContentPane().add(padTest);
+        PaddleTestTwo padTest = new PaddleTestTwo();
+        ((Component)padTest).setFocusable(true);
+        getContentPane().add(padTest);
+        setVisible(true);
 
-		setVisible(true);
-
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
-
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
 
 }
