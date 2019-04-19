@@ -45,6 +45,6 @@ class Main {
          out.println(five.equals(five));	
          */
         //Tester run = new Tester();
-        Run ex = new Run();
+        Run run = new Run();
     }
 }

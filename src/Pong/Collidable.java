@@ -10,9 +10,9 @@ import java.awt.Graphics;
 
 public interface Collidable {
 
-    boolean didCollideLeft(Object obj);
+    public abstract boolean didCollideLeft(Object obj);
 
-    boolean didCollideRight(Object obj);
+    public boolean didCollideRight(Object obj);
 
     boolean didCollideTop(Object obj);
 

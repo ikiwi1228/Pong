@@ -96,27 +96,23 @@ public class Ball extends Block implements Collidable{
         return super.toString() + "X speed is " + this.getXSpeed() + " and y speed is " + this.getYSpeed() + ".";
     }
 
-    @Override
     public boolean didCollideLeft(Object obj) {
         Block b = (Block) obj;
-        return (this.getX()<=b.getX() && this.getY()>=b.getY() && this.getY()<=b.getY()+b.getHeight());
+        return (this.getX()<=b.getX()+b.getWidth() && this.getY()>=b.getY() && this.getY()<=b.getY()+b.getHeight());
     }
 
-    @Override
     public boolean didCollideRight(Object obj) {
         Block b = (Block) obj;
         return (this.getX()>=b.getX() && this.getY()>=b.getY() && this.getY()<=b.getY()+b.getHeight());
     }
 
-    @Override
     public boolean didCollideTop(Object obj) {
         Block b = (Block) obj;
         return (this.getX()>=b.getX() && this.getX()<=b.getX()+b.getWidth() && this.getY()>=b.getY());
     }
 
-    @Override
     public boolean didCollideBottom(Object obj) {
         Block b = (Block) obj;
-        return (this.getX()>=b.getX() && this.getX()<=b.getX()+b.getWidth() && this.getY()<=b.getY());
+        return (this.getX()>=b.getX() && this.getX()<=b.getX()+b.getWidth() && this.getY()<=b.getY()+b.getHeight());
     }
 }
